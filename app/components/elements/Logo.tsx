@@ -9,7 +9,7 @@ export const Logo = ({ height = 20, width = 20 }) => {
       alt="Logo"
       height={height}
       width={width}
-      className="object-contain"
+      className="responsive"
     />
   );
 };
