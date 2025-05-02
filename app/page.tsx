@@ -1,7 +1,11 @@
+import React from "react";
+import { Landingpage } from "./pages/Landingpage";
 export default function Home() {
   return (
     <>
-      <div></div>
+      <div>
+        <Landingpage />
+      </div>
     </>
   );
 }
