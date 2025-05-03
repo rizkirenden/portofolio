@@ -1,11 +1,9 @@
 import React from "react";
-import Navbar from "../components/layout/Navbar";
-import Me from "../components/layout/Me";
+import Card from "../components/layout/Card";
 export const Landingpage = () => {
   return (
     <div>
-      <Navbar />
-      <Me />
+      <Card />
     </div>
   );
 };
