@@ -1,10 +1,6 @@
 import React from "react";
-import Saya from "../elements/Saya";
+
 export const Framework = () => {
-  return (
-    <div>
-      <Saya />
-    </div>
-  );
+  return <div></div>;
 };
 export default Framework;
