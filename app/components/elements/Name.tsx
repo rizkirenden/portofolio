@@ -16,7 +16,7 @@ export const Name: React.FC<NameitemProps> = ({ name }) => {
     >
       <h1 className="text-3xl font-bold text-gray-800">{name}</h1>
       <p className="text-gray-500">
-        Frontend Developer React JS & FullStack Developer Laravel
+        Frontend Developer React Js & FullStack Developer Laravel
       </p>
     </motion.div>
   );
