@@ -26,7 +26,7 @@ export const Framework = () => {
         {FrameworkData.map((image, index) => (
           <div
             key={index}
-            className={`bg-white items-center flex justify-center h-50 skew-x-11 relative overflow-hidden transition-all duration-500 ease-in-out cursor-pointer
+            className={`bg-white items-center flex justify-center h-50 md:h-72 skew-x-11 relative overflow-hidden transition-all duration-500 ease-in-out cursor-pointer
             ${
               clickedIndex === index
                 ? "bg-gradient-to-r from-transparent to-gray-600"
