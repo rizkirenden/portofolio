@@ -1,9 +1,10 @@
 import React from "react";
-import { Namenav } from "./components/atoms/namenav";
+import Header from "../app/components/molecules/header";
+
 export default function Home() {
   return (
-    <header className="p-4 ml-10">
-      <Namenav />
-    </header>
+    <div>
+      <Header />
+    </div>
   );
 }
