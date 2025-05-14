@@ -1,6 +1,7 @@
 import React from "react";
 import { MdOutgoingMail } from "react-icons/md";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+
 export const Icons = ({
   className = "",
   mailColor = "text-white",
