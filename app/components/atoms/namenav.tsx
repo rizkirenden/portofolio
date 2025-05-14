@@ -1,5 +1,36 @@
+"use client";
 import React from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
-export const namenav = () => {
-  return <div>namenav</div>;
+const navItems = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Projects", href: "/projects" },
+];
+
+export const Namenav = () => {
+  const pathname = usePathname();
+
+  return (
+    <nav className="flex gap-6">
+      {navItems.map((item) => {
+        const isActive = pathname === item.href;
+
+        return (
+          <Link
+            key={item.href}
+            href={item.href}
+            className={`pb-1 border-b-2 transition-colors ${
+              isActive
+                ? "border-white text-white"
+                : "border-transparent text-gray-400 hover:text-white"
+            }`}
+          >
+            {item.label}
+          </Link>
+        );
+      })}
+    </nav>
+  );
 };

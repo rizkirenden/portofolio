@@ -1,13 +1,9 @@
 import React from "react";
-import { Title } from "./components/atoms/title";
+import { Namenav } from "./components/atoms/namenav";
 export default function Home() {
   return (
-    <>
-      <div>
-        <Title textClass="text-2xl text-gray-900 dark:text-white">
-          Ini Judul
-        </Title>
-      </div>
-    </>
+    <header className="p-4 ml-10">
+      <Namenav />
+    </header>
   );
 }
