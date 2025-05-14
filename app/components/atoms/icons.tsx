@@ -13,10 +13,30 @@ export const Icons = ({
 }) => {
   return (
     <div className={`flex items-center gap-4 ${className}`}>
-      <MdOutgoingMail className={`${mailColor} ${mailSize}`} />
-      <FaGithub className="text-white text-md" />
-      <FaLinkedin className="text-white text-md" />
-      <FaInstagram className="text-white text-md" />
+      <a href="rizkirenden@gmail.com" target="_blank" rel="noopener noreferrer">
+        <MdOutgoingMail className={`${mailColor} ${mailSize}`} />
+      </a>
+      <a
+        href="https://github.com/rizkirenden"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaGithub className="text-white text-xl" />
+      </a>
+      <a
+        href="https://linkedin.com/in/rizki-renden"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaLinkedin className="text-white text-xl" />
+      </a>
+      <a
+        href="https://instagram.com/rizkirenden"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaInstagram className="text-white text-xl" />
+      </a>
     </div>
   );
 };

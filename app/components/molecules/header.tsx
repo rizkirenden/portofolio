@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div className="flex items-center justify-between px-6">
       <Namenav />
-      <Icons />
+      <Icons mailSize="text-xl" />
     </div>
   );
 };
