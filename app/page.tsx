@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "../app/components/molecules/header";
+import Footer from "../app/components/molecules/footer";
 
 export default function Home() {
   return (
     <div>
-      <Header />
+      <Footer />
     </div>
   );
 }

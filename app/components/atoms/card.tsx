@@ -6,16 +6,21 @@ export const Card = ({
   cardcolor = "bg-white",
   height = "",
   width = "",
+  style = {},
+  rounded = "rounded-md",
 }: {
   children: React.ReactNode;
+  style?: React.CSSProperties;
   cardsize?: string;
   cardcolor?: string;
   height?: string;
   width?: string;
+  rounded?: string;
 }) => {
   return (
     <div
-      className={`rounded-lg shadow-lg overflow-hidden ${cardsize} ${cardcolor} ${height} ${width}`}
+      className={`${rounded} shadow-lg overflow-hidden ${cardsize} ${cardcolor} ${height} ${width}`}
+      style={style}
     >
       {children}
     </div>
