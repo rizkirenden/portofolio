@@ -1,6 +1,6 @@
 import React from "react";
 import About from "../components/organisms/about";
-const pageabout = () => {
+const Pageabout = () => {
   return (
     <div>
       <About />
@@ -8,4 +8,4 @@ const pageabout = () => {
   );
 };
 
-export default pageabout;
+export default Pageabout;
