@@ -4,10 +4,12 @@ export const Button = ({
   children,
   className = "",
   href = "",
+  style = {},
 }: {
   children: React.ReactNode;
   className?: string;
   href?: string;
+  style?: React.CSSProperties;
 }) => {
   const baseClass = `flex items-center rounded-md px-5 py-2 text-center text-sm ${className}`;
 
@@ -21,7 +23,7 @@ export const Button = ({
       {children}
     </a>
   ) : (
-    <button type="button" className={baseClass}>
+    <button type="button" className={baseClass} style={style}>
       {children}
     </button>
   );

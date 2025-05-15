@@ -4,6 +4,7 @@ import Footer from "../molecules/home/footer";
 import Tittleabout from "../molecules/about/tittleabout";
 import Subtittle from "../molecules/about/subtittle";
 import Cardfotoabout from "../molecules/about/cardfotoabout";
+import Cardteknologi from "../molecules/about/cardteknologi";
 const About = () => {
   return (
     <div className="min-h-screen flex flex-col">
@@ -49,6 +50,9 @@ const About = () => {
         <div className="flex items-center justify-center w-full max-w-6xl mx-auto">
           <Tittleabout>Teknologi</Tittleabout>
         </div>
+      </div>
+      <div>
+        <Cardteknologi />
       </div>
       <footer className="mt-auto mb-8">
         <Footer />
