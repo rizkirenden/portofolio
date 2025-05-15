@@ -5,7 +5,6 @@ import Image from "next/image";
 const Cardfotohome = () => {
   return (
     <div className="relative">
-      {/* Card bayangan (background) */}
       <Card
         rounded="rounded-lg"
         height="h-78"
@@ -15,8 +14,6 @@ const Cardfotohome = () => {
       >
         <></>
       </Card>
-
-      {/* Card utama */}
       <Card
         rounded="rounded-lg"
         height="h-76"
