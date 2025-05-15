@@ -2,12 +2,13 @@ import React from "react";
 
 export const Card = ({
   children,
-  cardsize = "md",
-  cardcolor = "bg-white",
+  cardsize = "",
+  cardcolor = "",
   height = "",
   width = "",
   style = {},
-  rounded = "rounded-md",
+  rounded = "",
+  className = "",
 }: {
   children: React.ReactNode;
   style?: React.CSSProperties;
@@ -16,10 +17,11 @@ export const Card = ({
   height?: string;
   width?: string;
   rounded?: string;
+  className?: string;
 }) => {
   return (
     <div
-      className={`${rounded} shadow-lg overflow-hidden ${cardsize} ${cardcolor} ${height} ${width}`}
+      className={`${rounded} shadow-lg overflow-hidden ${cardsize} ${cardcolor} ${height} ${width} ${className}`}
       style={style}
     >
       {children}
