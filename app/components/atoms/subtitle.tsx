@@ -1,5 +1,11 @@
 import React from "react";
 
-export const Subtitle = ({ children }: { children: React.ReactNode }) => {
-  return <p className="mb-4 text-lg font-normal text-white">{children}</p>;
+export const Subtitle = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => {
+  return <p className={`text-sm font-normal ${className}`}>{children}</p>;
 };

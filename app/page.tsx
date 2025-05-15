@@ -1,10 +1,14 @@
 import React from "react";
-import Footer from "../app/components/molecules/footer";
+import Btnresume from "./components/molecules/btnresume";
+import Btncontacme from "./components/molecules/btncontacme";
+import Tittlehome from "./components/molecules/tittlehome";
 
 export default function Home() {
   return (
     <div>
-      <Footer />
+      <Btnresume />
+      <Btncontacme />
+      <Tittlehome />
     </div>
   );
 }

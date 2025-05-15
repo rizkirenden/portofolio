@@ -2,7 +2,7 @@ import React from "react";
 
 export const Title = ({
   children,
-  textClass = "text-sm text-white",
+  textClass = "",
 }: {
   textClass?: string;
   children: React.ReactNode;
