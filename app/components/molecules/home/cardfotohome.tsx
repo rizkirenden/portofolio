@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from "../atoms/card";
+import { Card } from "../../atoms/card";
 import Image from "next/image";
 
 const Cardfotohome = () => {
@@ -8,8 +8,8 @@ const Cardfotohome = () => {
       {/* Card bayangan (background) */}
       <Card
         rounded="rounded-lg"
-        height="h-67"
-        width="w-52"
+        height="h-78"
+        width="w-61"
         cardcolor="bg-[#393737]"
         className="absolute top-1 left-1 z-0"
       >
@@ -19,12 +19,12 @@ const Cardfotohome = () => {
       {/* Card utama */}
       <Card
         rounded="rounded-lg"
-        height="h-66"
-        width="w-50"
+        height="h-76"
+        width="w-59"
         cardcolor="bg-white"
         className="relative z-10 overflow-visible"
       >
-        <div className="relative w-54 h-82 absolute -top-16 left-1/2 -translate-x-1/2">
+        <div className="relative w-59 h-96 absolute -top-20 left-1/2 -translate-x-1/2">
           <Image
             src="/images/rizkihome.png"
             alt="Foto Rizki"

@@ -1,6 +1,6 @@
 import React from "react";
-import { Card } from "../atoms/card";
-import { Subtitle } from "../atoms/subtitle";
+import { Card } from "../../atoms/card";
+import { Subtitle } from "../../atoms/subtitle";
 const Footer = () => {
   return (
     <Card

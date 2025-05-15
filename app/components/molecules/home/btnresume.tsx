@@ -1,6 +1,6 @@
 import React from "react";
-import { Button } from "../atoms/button";
-import { Subtitle } from "../atoms/subtitle";
+import { Button } from "../../atoms/button";
+import { Subtitle } from "../../atoms/subtitle";
 import { IoCloudDownloadOutline } from "react-icons/io5";
 const Btnresume = () => {
   return (

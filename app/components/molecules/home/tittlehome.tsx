@@ -1,6 +1,6 @@
 import React from "react";
-import { Subtitle } from "../atoms/subtitle";
-import { Title } from "../atoms/title";
+import { Subtitle } from "../../atoms/subtitle";
+import { Title } from "../../atoms/title";
 const Tittlehome = () => {
   return (
     <div>
