@@ -13,7 +13,7 @@ const About = () => {
       </div>
       <div className="flex items-center py-6 ">
         <div className="flex items-center justify-center w-full max-w-6xl mx-auto">
-          <Tittleabout>Tentang Saya</Tittleabout>
+          <Tittleabout>TENTANG SAYA</Tittleabout>
         </div>
       </div>
       <div className="flex items-center justify-between mx-22">
@@ -48,10 +48,18 @@ const About = () => {
       </div>
       <div className="flex items-center py-6 ">
         <div className="flex items-center justify-center w-full max-w-6xl mx-auto">
-          <Tittleabout>Teknologi</Tittleabout>
+          <Tittleabout>TEKNOLOGI</Tittleabout>
         </div>
       </div>
-      <div>
+      <div className="py-6 flex items-center justify-center">
+        <Cardteknologi />
+      </div>
+      <div className="flex items-center py-6 ">
+        <div className="flex items-center justify-center w-full max-w-6xl mx-auto">
+          <Tittleabout>EXPERIENCE</Tittleabout>
+        </div>
+      </div>
+      <div className="py-6 flex items-center justify-center">
         <Cardteknologi />
       </div>
       <footer className="mt-auto mb-8">

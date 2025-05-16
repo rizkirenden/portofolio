@@ -54,7 +54,7 @@ const dataTeknologi = [
 
 const Cardteknologi = () => {
   return (
-    <div className="flex items-center gap-6">
+    <div className="flex items-center justify-center gap-10">
       {dataTeknologi.map((item, index) => (
         <CardItem
           key={index}
@@ -79,7 +79,7 @@ const CardItem = ({ title, image, color, imageHeight }: CardItemProps) => {
   return (
     <Card
       rounded="rounded-lg"
-      height="h-54"
+      height="h-48"
       width="w-32"
       cardcolor="bg-white"
       className="relative p-4"
@@ -95,7 +95,7 @@ const CardItem = ({ title, image, color, imageHeight }: CardItemProps) => {
 
       <div className="mb-4">
         {Array.isArray(title) ? (
-          <Subtitle className="text-sm">
+          <Subtitle className="text-sm text-center">
             {title.map((part, i) => (
               <span key={i} className={color[i]}>
                 {part}
@@ -103,13 +103,15 @@ const CardItem = ({ title, image, color, imageHeight }: CardItemProps) => {
             ))}
           </Subtitle>
         ) : (
-          <Subtitle className={`text-sm ${color}`}>{title}</Subtitle>
+          <Subtitle className={`text-sm text-center ${color}`}>
+            {title}
+          </Subtitle>
         )}
       </div>
 
       <div>
         <Button
-          className="text-white w-20 flex items-center justify-center gap-2"
+          className="text-white w-24 flex items-center justify-center gap-2"
           style={{
             backgroundColor: Array.isArray(color)
               ? color[0].match(/#(?:[0-9a-fA-F]{3}){1,2}/)?.[0]
