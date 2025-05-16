@@ -1,10 +1,11 @@
 import React from "react";
 import About from "../components/organisms/about";
+import Template from "../components/templates/template";
 const Pageabout = () => {
   return (
-    <div>
+    <Template>
       <About />
-    </div>
+    </Template>
   );
 };
 
