@@ -14,6 +14,12 @@ const dataTeknologi = [
     imageHeight: "h-20",
   },
   {
+    title: "NEXT JS",
+    image: "/images/nextjs.png",
+    color: "text-[#000000]",
+    imageHeight: "h-20",
+  },
+  {
     title: "LARAVEL",
     image: "/images/Laravel.png",
     color: "text-[#FF2D20]",
@@ -54,7 +60,7 @@ const dataTeknologi = [
 
 const Cardteknologi = () => {
   return (
-    <div className="flex items-center justify-center gap-10">
+    <div className="flex items-center justify-center gap-8">
       {dataTeknologi.map((item, index) => (
         <CardItem
           key={index}
@@ -111,7 +117,7 @@ const CardItem = ({ title, image, color, imageHeight }: CardItemProps) => {
 
       <div>
         <Button
-          className="text-white w-24 flex items-center justify-center gap-2"
+          className="text-white w-24 flex items-center justify-center gap-2 rounded-xl"
           style={{
             backgroundColor: Array.isArray(color)
               ? color[0].match(/#(?:[0-9a-fA-F]{3}){1,2}/)?.[0]

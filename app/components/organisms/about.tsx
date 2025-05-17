@@ -5,6 +5,8 @@ import Tittleabout from "../molecules/about/tittleabout";
 import Subtittle from "../molecules/about/subtittle";
 import Cardfotoabout from "../molecules/about/cardfotoabout";
 import Cardteknologi from "../molecules/about/cardteknologi";
+import Experience from "../molecules/about/experience";
+import Education from "../molecules/about/education";
 const About = () => {
   return (
     <div className="min-h-screen flex flex-col">
@@ -60,7 +62,20 @@ const About = () => {
         </div>
       </div>
       <div className="py-6 flex items-center justify-center">
-        <Cardteknologi />
+        <div className="w-130 max-w-2xl px-2">
+          <Experience />
+        </div>
+      </div>
+
+      <div className="flex items-center py-6 ">
+        <div className="flex items-center justify-center w-full max-w-6xl mx-auto">
+          <Tittleabout>EDUCATION</Tittleabout>
+        </div>
+      </div>
+      <div className="py-6 flex items-center justify-center mb-30">
+        <div className="w-130 max-w-2xl px-2">
+          <Education />
+        </div>
       </div>
       <footer className="mt-auto mb-8">
         <Footer />
