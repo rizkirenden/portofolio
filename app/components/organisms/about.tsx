@@ -34,7 +34,7 @@ const About = () => {
             </div>
 
             {/* Profile Text */}
-            <div className="w-full md:w-2/3 md:order-1">
+            <div className="w-full md:w-2/3 md:order-1 text-center md:text-left">
               <Subtittle>
                 Hai! Saya Moh. Rizki, seorang Software Engineer yang berdedikasi
                 dan serbaguna dengan landasan yang kuat dalam pengembangan

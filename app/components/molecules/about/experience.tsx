@@ -26,7 +26,8 @@ const Experience = () => {
           </div>
           <div className="flex flex-col">
             <Title textClass="text-white text-2xl font-normal">
-              Full Stack Web Developer @Bank Sulteng
+              Full Stack Web Developer{" "}
+              <span style={{ color: "#62D9F6" }}>@Bank Sulteng</span>
             </Title>
             <Subtitle className="text-[#C7C7C7]">
               Des 2023 - Jan 2024 | Palu, Indonesia - Magang
