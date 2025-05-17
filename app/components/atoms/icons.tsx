@@ -48,28 +48,17 @@ export const Icons = ({ className = "" }: { className?: string }) => {
         transition: { type: "spring", stiffness: 1000 },
       },
       tap: { scale: 0.9 },
-      falling: !isMobile
-        ? {
-            y: ["-100%", "110%"],
-            rotate: [0, 360],
-            transition: {
-              duration: 3,
-              repeat: Infinity,
-              repeatType: "loop",
-              ease: "linear",
-            },
-          }
-        : {},
-      rotateMobile: isMobile
-        ? {
-            rotate: [0, 360],
-            transition: {
-              duration: 2,
-              repeat: Infinity,
-              ease: "linear",
-            },
-          }
-        : {},
+      falling: {
+        y: isMobile ? ["-120%", "120%"] : ["-100%", "110%"],
+        rotate: [0, 360],
+        transition: {
+          duration: isMobile ? 4 : 3,
+          repeat: Infinity,
+          repeatType: "loop",
+          ease: "linear",
+        },
+      },
+      rotateMobile: {}, // tidak dipakai tapi biar aman
     };
 
     setIconVariants(variants);
@@ -87,7 +76,7 @@ export const Icons = ({ className = "" }: { className?: string }) => {
     setHoverStates(newStates);
   };
 
-  if (!iconVariants) return null; // hindari rendering sebelum siap
+  if (!iconVariants) return null; // jangan render sebelum variants siap
 
   return (
     <div className={`flex items-center gap-5 ${className}`}>
@@ -106,13 +95,7 @@ export const Icons = ({ className = "" }: { className?: string }) => {
           onTouchStart={() => handleStart(i)}
           onTouchEnd={() => handleEnd(i)}
           onTouchCancel={() => handleEnd(i)}
-          animate={
-            hoverStates[i]
-              ? "initial"
-              : iconVariants.rotateMobile.rotate
-              ? "rotateMobile"
-              : "falling"
-          }
+          animate={hoverStates[i] ? "initial" : "falling"}
           style={{ position: "relative", display: "inline-block" }}
         >
           <Icon className={`${color} ${size} transition-all duration-300`} />
