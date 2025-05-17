@@ -11,7 +11,7 @@ const Cardproject = () => {
       image: "/images/project1.jpeg",
       tittle: "MechaTrack",
       subtittle:
-        "MechaTrack menggunakan teknologi PHP,Laravel, Node, Tailwind, Blade",
+        "MechaTrack menggunakan teknologi PHP, Laravel, Node, Tailwind, Blade",
       alt: "PT Premier Motors",
     },
     {
@@ -41,54 +41,41 @@ const Cardproject = () => {
     {
       id: 5,
       image: "/images/project5.jpg",
-      tittle: "Sistem deteksi Kebakaran",
+      tittle: "Sistem Deteksi Kebakaran",
       subtittle:
-        "Sistem deteksi kebakaran menggunakan teknologi React Native, Laravel, Internet Of Things (Iot), Tailwind",
-      alt: "Sistem Deteksi Kebakran",
+        "Sistem deteksi kebakaran menggunakan teknologi React Native, Laravel, IoT, Tailwind",
+      alt: "Sistem Deteksi Kebakaran",
     },
-    // Tambah data lain sesuai kebutuhan
   ];
 
   return (
     <div className="flex flex-wrap gap-6 items-center justify-center px-4 md:px-0">
       {projectData.map((project) => (
-        <div key={project.id} className="relative w-full sm:w-[400px]">
-          {/* Card background */}
+        <div key={project.id} className="w-full sm:w-[400px]">
           <Card
             rounded="rounded-lg"
-            height="h-[200px] md:h-[220px]"
-            width="w-full"
-            cardcolor="bg-white"
-            className="absolute top-1 left-4 z-0"
-          >
-            <></>
-          </Card>
-
-          {/* Card content */}
-          <Card
-            rounded="rounded-lg"
-            height="h-[200px] md:h-[220px]"
             width="w-full"
             cardcolor="bg-black"
-            className="relative z-10 overflow-hidden mx-auto border-2 border-white"
+            className="overflow-hidden border-2 border-white"
           >
-            <div className="flex items-center h-full">
-              <div className="w-1/3 h-full relative">
-                <Image
-                  src={project.image}
-                  alt={project.alt}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="w-2/3 p-4">
-                <Title textClass="text-white text-lg md:text-xl">
-                  {project.tittle}
-                </Title>
-                <Subtitle className="text-white text-sm md:text-base mt-2">
-                  {project.subtittle}
-                </Subtitle>
-              </div>
+            {/* Gambar di atas */}
+            <div className="relative w-full h-[180px]">
+              <Image
+                src={project.image}
+                alt={project.alt}
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            {/* Konten teks di bawah */}
+            <div className="p-4">
+              <Title textClass="text-white text-lg md:text-xl font-semibold">
+                {project.tittle}
+              </Title>
+              <Subtitle className="text-white text-sm md:text-base mt-2 leading-snug">
+                {project.subtittle}
+              </Subtitle>
             </div>
           </Card>
         </div>
