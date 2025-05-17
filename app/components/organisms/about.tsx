@@ -36,20 +36,20 @@ const About = () => {
             {/* Profile Text */}
             <div className="w-full md:w-2/3 md:order-1 text-center md:text-left">
               <Subtittle>
-                Hai! Saya Moh. Rizki, seorang Software Engineer yang berdedikasi
-                dan serbaguna dengan landasan yang kuat dalam pengembangan
-                full-stack, khususnya di JavaScript, PHP, Node.js, React.js,
-                Express.js, Laravel, dan teknologi web modern. Saya adalah
-                lulusan Teknik Informatika dari Universitas Tadulako, dan alumni
-                program bootcamp intensif di Harisenin, yang membantu saya
-                memantapkan keterampilan praktis di dunia industri. Dengan
-                semangat dalam membangun aplikasi yang berpusat pada pengguna,
-                saya telah berhasil berkontribusi dalam pengembangan sistem
-                monitoring proyek dan sistem administrasi service serta stok
-                bengkel, serta mendorong peningkatan efisiensi alur kerja. Saat
-                ini, saya sedang mencari peluang untuk memanfaatkan keterampilan
-                saya dalam tim global berbasis teknologi yang berfokus pada
-                solusi yang berdampak.
+                Hai! Saya <span className="text-[#62D9F6]">MOH. RIZKI</span>,
+                seorang Software Engineer yang berdedikasi dan serbaguna dengan
+                landasan yang kuat dalam pengembangan full-stack, khususnya di
+                JavaScript, PHP, Node.js, React.js, Express.js, Laravel, dan
+                teknologi web modern. Saya adalah lulusan Teknik Informatika
+                dari Universitas Tadulako, dan alumni program bootcamp intensif
+                di Harisenin, yang membantu saya memantapkan keterampilan
+                praktis di dunia industri. Dengan semangat dalam membangun
+                aplikasi yang berpusat pada pengguna, saya telah berhasil
+                berkontribusi dalam pengembangan sistem monitoring proyek dan
+                sistem administrasi service serta stok bengkel, serta mendorong
+                peningkatan efisiensi alur kerja. Saat ini, saya sedang mencari
+                peluang untuk memanfaatkan keterampilan saya dalam tim global
+                berbasis teknologi yang berfokus pada solusi yang berdampak.
               </Subtittle>
 
               {/* Stats */}
