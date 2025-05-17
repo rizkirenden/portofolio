@@ -9,7 +9,7 @@ const Project = () => {
       <div className="px-4 md:px-8 py-4">
         <Header />
       </div>
-      <div className="max-w-6xl mx-auto text-center mb-4">
+      <div className="max-w-6xl mx-auto text-center py-6">
         <Tittleproject>PROJECTS</Tittleproject>
       </div>
       <Cardproject />;
