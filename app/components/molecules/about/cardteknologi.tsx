@@ -21,7 +21,7 @@ const dataTeknologi = [
   },
   {
     title: "LARAVEL",
-    image: "/images/Laravel.png",
+    image: "/images/laravel.png",
     color: "text-[#FF2D20]",
     bgColor: "#FF2D20",
   },
