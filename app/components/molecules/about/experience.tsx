@@ -32,9 +32,7 @@ const Experience = () => {
               Des 2023 - Jan 2024 | Palu, Indonesia - Magang
             </Subtitle>
             <Subtitle className="text-white">
-              Melakukan kegiatan perbankan yang terbaik dengan mengutamakan
-              pelayanan kepada segmen mikro, kecil, dan menengah untuk menunjang
-              peningkatan ekonomi masyarakat. Saya melakukan pembuatan Web
+              Melakukan kegiatan Monitoring ATM dan melakukan pembuatan Web
               E-Monitoring Project pada Divisi IT
             </Subtitle>
           </div>
