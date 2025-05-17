@@ -1,8 +1,8 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { MdOutgoingMail } from "react-icons/md";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 const icons = [
   {
@@ -35,25 +35,48 @@ export const Icons = ({ className = "" }: { className?: string }) => {
   const [hoverStates, setHoverStates] = useState<boolean[]>(
     new Array(icons.length).fill(false)
   );
+  const [isMobile, setIsMobile] = useState(false);
 
-  const iconVariants = {
-    initial: { scale: 1, rotate: 0, y: 0 },
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.matchMedia("(pointer: coarse)").matches);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  // Variants didefinisikan dinamis sesuai isMobile
+  const iconVariants: Variants = {
+    initial: { scale: 1, rotate: 0, y: "0%" },
     hover: {
       scale: 1.2,
       rotate: 20,
       transition: { type: "spring", stiffness: 1000 },
     },
     tap: { scale: 0.9 },
-    falling: {
-      y: ["-120%", "120%"],
-      rotate: [0, 360],
-      transition: {
-        duration: 4,
-        repeat: Infinity,
-        repeatType: "loop",
-        ease: "linear",
-      },
-    },
+    falling: !isMobile
+      ? {
+          y: ["-120%", "120%"],
+          rotate: [0, 360],
+          transition: {
+            duration: 4,
+            repeat: Infinity,
+            repeatType: "loop",
+            ease: "linear",
+          },
+        }
+      : {},
+    rotateMobile: isMobile
+      ? {
+          rotate: [0, 360],
+          transition: {
+            duration: 3,
+            repeat: Infinity,
+            ease: "linear",
+          },
+        }
+      : {},
   };
 
   const handleStart = (index: number) => {
@@ -78,6 +101,9 @@ export const Icons = ({ className = "" }: { className?: string }) => {
           rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
           variants={iconVariants}
           initial="initial"
+          animate={
+            hoverStates[i] ? "initial" : isMobile ? "rotateMobile" : "falling"
+          }
           whileHover="hover"
           whileTap="tap"
           onHoverStart={() => handleStart(i)}
@@ -85,7 +111,6 @@ export const Icons = ({ className = "" }: { className?: string }) => {
           onTouchStart={() => handleStart(i)}
           onTouchEnd={() => handleEnd(i)}
           onTouchCancel={() => handleEnd(i)}
-          animate={hoverStates[i] ? "initial" : "falling"}
           style={{ position: "relative", display: "inline-block" }}
         >
           <Icon className={`${color} ${size} transition-all duration-300`} />
