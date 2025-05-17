@@ -34,8 +34,12 @@ export const Icons = ({
   mailColor?: string;
   mailSize?: string;
 }) => {
-  // state untuk tracking hover tiap icon, bisa pakai index juga kalau perlu per icon beda
   const [isHovered, setIsHovered] = useState(false);
+
+  // fungsi untuk stop jatuh saat hover atau touch start
+  const handleStart = () => setIsHovered(true);
+  // fungsi untuk lanjut jatuh saat hover end atau touch end
+  const handleEnd = () => setIsHovered(false);
 
   return (
     <div className={`flex items-center gap-5 ${className}`}>
@@ -74,8 +78,11 @@ export const Icons = ({
           initial="initial"
           whileHover="hover"
           whileTap="tap"
-          onHoverStart={() => setIsHovered(true)}
-          onHoverEnd={() => setIsHovered(false)}
+          onHoverStart={handleStart}
+          onHoverEnd={handleEnd}
+          onTouchStart={handleStart}
+          onTouchEnd={handleEnd}
+          onTouchCancel={handleEnd}
           animate={isHovered ? "initial" : fallingAnimation}
           style={{ position: "relative", display: "inline-block" }}
         >
