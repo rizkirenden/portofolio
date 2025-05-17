@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0">
       <Namenav />
-      <Icons mailSize="text-xl" />
+      <Icons className="text-xl" />
     </div>
   );
 };
