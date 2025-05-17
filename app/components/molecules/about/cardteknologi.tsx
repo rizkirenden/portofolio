@@ -44,6 +44,24 @@ const dataTeknologi = [
     bgColor: "#00678C",
   },
   {
+    title: "JIRA",
+    image: "/images/jira.png",
+    color: "text-[#126BE7]",
+    bgColor: "#126BE7",
+  },
+  {
+    title: ["S", "L", "A", "C", "K"],
+    image: "/images/slack.png",
+    color: [
+      "text-[#ECB22E]",
+      "text-[#36C5f0]",
+      "text-[#2EB67D]",
+      "text-[#E01E5A]",
+      "text-[#ECB22E]",
+    ],
+    bgColor: "#126BE7",
+  },
+  {
     title: "GIT",
     image: "/images/git.png",
     color: "text-[#F05033]",
