@@ -7,10 +7,10 @@ const Cardfotohome = () => {
     <div className="relative w-full md:w-auto">
       <Card
         rounded="rounded-lg"
-        height="h-64 md:h-78"
-        width="w-48 md:w-61"
+        height="h-62 md:h-78"
+        width="w-46 md:w-61"
         cardcolor="bg-[#393737]"
-        className="absolute top-1 left-17 md:left-1 z-0"
+        className="absolute top-1 left-18 md:left-1 z-0"
       >
         <></>
       </Card>
