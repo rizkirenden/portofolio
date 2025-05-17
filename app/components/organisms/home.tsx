@@ -26,8 +26,10 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <footer className="mt-auto mb-4 md:mb-8 px-4 md:px-0">
-        <Footer />
+      <footer className="mt-auto mb-4 md:mb-8 px-4 md:px-0 text-center">
+        <div className="max-w-6xl mx-auto">
+          <Footer />
+        </div>
       </footer>
     </div>
   );

@@ -7,78 +7,104 @@ import Cardfotoabout from "../molecules/about/cardfotoabout";
 import Cardteknologi from "../molecules/about/cardteknologi";
 import Experience from "../molecules/about/experience";
 import Education from "../molecules/about/education";
+
 const About = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      <div className="px-8 py-4">
+      {/* Header */}
+      <div className="px-4 py-4 md:px-8">
         <Header />
       </div>
-      <div className="flex items-center py-6 ">
-        <div className="flex items-center justify-center w-full max-w-6xl mx-auto">
-          <Tittleabout>TENTANG SAYA</Tittleabout>
-        </div>
-      </div>
-      <div className="flex items-center justify-between mx-22">
-        <div className="w-2/3 flex-col">
-          <Subtittle>
-            Hai! Saya Moh. Rizki, seorang Software Engineer yang berdedikasi dan
-            serbaguna dengan landasan yang kuat dalam pengembangan full-stack,
-            khususnya di JavaScript, PHP, Node.js, React.js, Express.js,
-            Laravel, dan teknologi web modern. Saya adalah lulusan Teknik
-            Informatika dari Universitas Tadulako, dan alumni program bootcamp
-            intensif di Harisenin, yang membantu saya memantapkan keterampilan
-            praktis di dunia industri. Dengan semangat dalam membangun aplikasi
-            yang berpusat pada pengguna, saya telah berhasil berkontribusi dalam
-            pengembangan sistem monitoring proyek dan sistem administrasi
-            service serta stok bengkel, serta mendorong peningkatan efisiensi
-            alur kerja. Saat ini, saya sedang mencari peluang untuk memanfaatkan
-            keterampilan saya dalam tim global berbasis teknologi yang berfokus
-            pada solusi yang berdampak.
-          </Subtittle>
-          <div className="my-4 flex gap-20">
-            <div className="flex flex-col">
-              <Tittleabout>5+</Tittleabout>
-              <Subtittle className="text-[#C7C7C7]">Project</Subtittle>
+
+      {/* Main Content */}
+      <main className="flex-1 px-4 md:px-8">
+        {/* Title Section */}
+        <section className="py-6">
+          <div className="max-w-6xl mx-auto text-center">
+            <Tittleabout>TENTANG SAYA</Tittleabout>
+          </div>
+        </section>
+
+        {/* Profile Section - Mobile First */}
+        <section className="mb-12 md:mb-16">
+          <div className="flex flex-col md:flex-row items-center md:gap-12">
+            {/* Profile Photo - Top on Mobile, Right on Desktop */}
+            <div className="w-full flex justify-center md:w-auto md:order-2">
+              <Cardfotoabout />
             </div>
-            <div className="flex flex-col items-center">
-              <Tittleabout>1+</Tittleabout>
-              <Subtittle className="text-[#C7C7C7]">Years Experience</Subtittle>
+
+            {/* Profile Text */}
+            <div className="w-full md:w-2/3 md:order-1">
+              <Subtittle>
+                Hai! Saya Moh. Rizki, seorang Software Engineer yang berdedikasi
+                dan serbaguna dengan landasan yang kuat dalam pengembangan
+                full-stack, khususnya di JavaScript, PHP, Node.js, React.js,
+                Express.js, Laravel, dan teknologi web modern. Saya adalah
+                lulusan Teknik Informatika dari Universitas Tadulako, dan alumni
+                program bootcamp intensif di Harisenin, yang membantu saya
+                memantapkan keterampilan praktis di dunia industri. Dengan
+                semangat dalam membangun aplikasi yang berpusat pada pengguna,
+                saya telah berhasil berkontribusi dalam pengembangan sistem
+                monitoring proyek dan sistem administrasi service serta stok
+                bengkel, serta mendorong peningkatan efisiensi alur kerja. Saat
+                ini, saya sedang mencari peluang untuk memanfaatkan keterampilan
+                saya dalam tim global berbasis teknologi yang berfokus pada
+                solusi yang berdampak.
+              </Subtittle>
+
+              {/* Stats */}
+              <div className="mt-6 flex gap-12 md:gap-20">
+                <div className="flex flex-col">
+                  <Tittleabout>5+</Tittleabout>
+                  <Subtittle className="text-[#C7C7C7]">Project</Subtittle>
+                </div>
+                <div className="flex flex-col">
+                  <Tittleabout>1+</Tittleabout>
+                  <Subtittle className="text-[#C7C7C7]">
+                    Years Experience
+                  </Subtittle>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <Cardfotoabout />
-      </div>
-      <div className="flex items-center py-6 ">
-        <div className="flex items-center justify-center w-full max-w-6xl mx-auto">
-          <Tittleabout>TEKNOLOGI</Tittleabout>
-        </div>
-      </div>
-      <div className="py-6 flex items-center justify-center">
-        <Cardteknologi />
-      </div>
-      <div className="flex items-center py-6 ">
-        <div className="flex items-center justify-center w-full max-w-6xl mx-auto">
-          <Tittleabout>EXPERIENCE</Tittleabout>
-        </div>
-      </div>
-      <div className="py-6 flex items-center justify-center">
-        <div className="w-130 max-w-2xl px-2">
-          <Experience />
-        </div>
-      </div>
+        </section>
 
-      <div className="flex items-center py-6 ">
-        <div className="flex items-center justify-center w-full max-w-6xl mx-auto">
-          <Tittleabout>EDUCATION</Tittleabout>
+        {/* Technology Section */}
+        <section className="mb-12 md:mb-16">
+          <div className="max-w-6xl mx-auto mb-6 text-center">
+            <Tittleabout>TEKNOLOGI</Tittleabout>
+          </div>
+          <div className="w-full">
+            <Cardteknologi />
+          </div>
+        </section>
+
+        {/* Experience Section */}
+        <section className="mb-12 md:mb-16">
+          <div className="max-w-6xl mx-auto mb-6 text-center">
+            <Tittleabout>EXPERIENCE</Tittleabout>
+          </div>
+          <div className="max-w-2xl mx-auto">
+            <Experience />
+          </div>
+        </section>
+
+        {/* Education Section */}
+        <section className="mb-12 md:mb-24">
+          <div className="max-w-6xl mx-auto mb-6 text-center">
+            <Tittleabout>EDUCATION</Tittleabout>
+          </div>
+          <div className="max-w-2xl mx-auto">
+            <Education />
+          </div>
+        </section>
+      </main>
+
+      {/* Footer */}
+      <footer className="mt-auto mb-4 md:mb-8 px-4 md:px-0 text-center">
+        <div className="max-w-6xl mx-auto">
+          <Footer />
         </div>
-      </div>
-      <div className="py-6 flex items-center justify-center mb-30">
-        <div className="w-130 max-w-2xl px-2">
-          <Education />
-        </div>
-      </div>
-      <footer className="mt-auto mb-8">
-        <Footer />
       </footer>
     </div>
   );
