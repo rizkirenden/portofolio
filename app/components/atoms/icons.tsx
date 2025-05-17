@@ -1,10 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MdOutgoingMail } from "react-icons/md";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-// Variants dengan key "falling" agar bisa dipanggil via animate="falling"
+// Variants termasuk animasi rotate untuk mobile
 const iconVariants = {
   initial: { scale: 1, rotate: 0, y: 0 },
   hover: {
@@ -20,6 +20,14 @@ const iconVariants = {
       duration: 3,
       repeat: Infinity,
       repeatType: "loop",
+      ease: "linear",
+    },
+  },
+  rotateMobile: {
+    rotate: [0, 360],
+    transition: {
+      duration: 2,
+      repeat: Infinity,
       ease: "linear",
     },
   },
@@ -53,19 +61,26 @@ const icons = [
 ];
 
 export const Icons = ({ className = "" }: { className?: string }) => {
-  // state per-icon (array of boolean)
   const [hoverStates, setHoverStates] = useState<boolean[]>(
     new Array(icons.length).fill(false)
   );
+  const [isMobile, setIsMobile] = useState(false);
 
-  // Handler saat hover/touch start
+  useEffect(() => {
+    // Deteksi jika user pakai device mobile
+    const checkMobile = () =>
+      setIsMobile(window.matchMedia("(pointer: coarse)").matches);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   const handleStart = (index: number) => {
     const newStates = [...hoverStates];
     newStates[index] = true;
     setHoverStates(newStates);
   };
 
-  // Handler saat hover/touch end
   const handleEnd = (index: number) => {
     const newStates = [...hoverStates];
     newStates[index] = false;
@@ -89,7 +104,9 @@ export const Icons = ({ className = "" }: { className?: string }) => {
           onTouchStart={() => handleStart(i)}
           onTouchEnd={() => handleEnd(i)}
           onTouchCancel={() => handleEnd(i)}
-          animate={hoverStates[i] ? "initial" : "falling"} // ✅ trigger animasi jatuh
+          animate={
+            hoverStates[i] ? "initial" : isMobile ? "rotateMobile" : "falling"
+          }
           style={{ position: "relative", display: "inline-block" }}
         >
           <Icon className={`${color} ${size} transition-all duration-300`} />
