@@ -12,7 +12,7 @@ const Home = () => {
       <div className="px-4 md:px-8 py-4">
         <Header />
       </div>
-      <div className="flex-1 flex items-center px-4 md:px-8 py-8">
+      <div className="flex-1 flex items-center px-4 md:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl mx-auto gap-8 md:gap-0">
           <div className="w-full md:w-1/2 order-2 md:order-1">
             <Tittlehome />
