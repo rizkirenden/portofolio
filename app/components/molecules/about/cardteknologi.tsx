@@ -1,9 +1,10 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 import { Card } from "../../atoms/card";
 import Image from "next/image";
 import { Subtitle } from "../../atoms/subtitle";
-import { Button } from "../../atoms/button";
-import { IoMdArrowRoundForward } from "react-icons/io";
 
 const dataTeknologi = [
   {
@@ -56,24 +57,33 @@ const dataTeknologi = [
   },
 ];
 
+const scrollDuration = 40; // durasi animasi berjalan dalam detik, bisa kamu ubah
+
 const Cardteknologi = () => {
   return (
-    <div className="relative">
-      {/* Scrollable container */}
-      <div className="px-4 md:px-0">
-        <div className="flex space-x-6 md:space-x-5 overflow-x-auto pb-4 -mx-4 px-4 md:mx-0 md:px-0 md:justify-center hide-scrollbar">
-          {dataTeknologi.map((item, index) => (
-            <div key={index} className="flex-shrink-0">
-              <CardItem
-                title={item.title}
-                image={item.image}
-                color={item.color}
-                bgColor={item.bgColor}
-              />
-            </div>
-          ))}
-        </div>
-      </div>
+    <div className="relative overflow-hidden">
+      <motion.div
+        className="flex space-x-6 md:space-x-5 pb-4"
+        style={{ width: "max-content" }}
+        animate={{ x: ["0%", "-50%"] }}
+        transition={{
+          repeat: Infinity,
+          repeatType: "loop",
+          duration: scrollDuration,
+          ease: "linear",
+        }}
+      >
+        {[...dataTeknologi, ...dataTeknologi].map((item, index) => (
+          <div key={index} className="flex-shrink-0">
+            <CardItem
+              title={item.title}
+              image={item.image}
+              color={item.color}
+              bgColor={item.bgColor}
+            />
+          </div>
+        ))}
+      </motion.div>
 
       {/* Gradient fade effect for mobile */}
       <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#1E1E1E] pointer-events-none md:hidden"></div>
@@ -88,27 +98,26 @@ interface CardItemProps {
   bgColor: string;
 }
 
-const CardItem = ({ title, image, color, bgColor }: CardItemProps) => {
+const CardItem = ({ title, image, color }: CardItemProps) => {
   return (
     <Card
       rounded="rounded-lg"
-      height="h-46 md:h-54"
+      height="h-36 md:h-40"
       width="w-28 md:w-32"
       cardcolor="bg-white"
       className="relative p-3 md:p-4"
     >
-      {/* Image */}
-      <div className="relative w-full h-16 md:h-20 mb-3 md:mb-4">
+      <div className="relative w-full h-16 md:h-20 mb-3 md:mb-4 overflow-hidden rounded-md">
         <Image
           src={image}
           alt={Array.isArray(title) ? title.join("") : title}
           fill
           className="object-contain"
           sizes="(max-width: 768px) 112px, 128px"
+          draggable={false}
         />
       </div>
 
-      {/* Title */}
       <div className="mb-3 md:mb-4 min-h-[40px] flex items-center justify-center">
         {Array.isArray(title) ? (
           <Subtitle className="text-xs md:text-sm text-center leading-tight">
@@ -123,17 +132,6 @@ const CardItem = ({ title, image, color, bgColor }: CardItemProps) => {
             {title}
           </Subtitle>
         )}
-      </div>
-
-      {/* Button */}
-      <div className="flex justify-center">
-        <Button
-          className={`text-white w-20 md:w-24 h-8 md:h-9 flex items-center justify-center gap-1 md:gap-2 rounded-lg md:rounded-xl text-xs md:text-sm`}
-          style={{ backgroundColor: bgColor }}
-        >
-          <span>Lihat</span>
-          <IoMdArrowRoundForward size={14} className="md:size-4" />
-        </Button>
       </div>
     </Card>
   );
