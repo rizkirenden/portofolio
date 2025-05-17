@@ -1,71 +1,97 @@
 "use client";
-import React, { useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
+import React, { useEffect, useState } from "react";
 import { MdOutgoingMail } from "react-icons/md";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { motion } from "framer-motion";
 
-export const Icons = ({
-  className = "",
-  mailColor = "text-white",
-  mailSize = "text-md",
-}: {
-  className?: string;
-  mailColor?: string;
-  mailSize?: string;
-}) => {
-  const controls = useAnimation();
+const icons = [
+  {
+    href: "mailto:rizkirenden@gmail.com",
+    Icon: MdOutgoingMail,
+    color: "text-white",
+    size: "text-md",
+  },
+  {
+    href: "https://github.com/rizkirenden",
+    Icon: FaGithub,
+    color: "text-white",
+    size: "text-xl",
+  },
+  {
+    href: "https://linkedin.com/in/rizki-renden",
+    Icon: FaLinkedin,
+    color: "text-white",
+    size: "text-xl",
+  },
+  {
+    href: "https://instagram.com/rizkirenden",
+    Icon: FaInstagram,
+    color: "text-white",
+    size: "text-xl",
+  },
+];
+
+export const Icons = ({ className = "" }: { className?: string }) => {
+  const [hoverStates, setHoverStates] = useState<boolean[]>(
+    new Array(icons.length).fill(false)
+  );
+  const [iconVariants, setIconVariants] = useState<any>(null);
 
   useEffect(() => {
     const isMobile = window.matchMedia("(pointer: coarse)").matches;
-    if (isMobile) {
-      controls.start({
-        scale: [1, 1.1, 1],
-        opacity: [0.8, 1, 0.8],
-        transition: {
-          duration: 2,
-          repeat: Infinity,
-          ease: "easeInOut",
-        },
-      });
-    } else {
-      controls.start("animate");
-    }
-  }, [controls]);
 
-  const iconVariants = {
-    initial: { opacity: 0, scale: 0.9 },
-    animate: { opacity: 1, scale: 1 },
-    hover: { scale: 1.2 },
+    const variants = {
+      initial: { scale: 1, rotate: 0, y: 0 },
+      hover: {
+        scale: 1.2,
+        rotate: 20,
+        transition: { type: "spring", stiffness: 1000 },
+      },
+      tap: { scale: 0.9 },
+      falling: !isMobile
+        ? {
+            y: ["-100%", "110%"],
+            rotate: [0, 360],
+            transition: {
+              duration: 3,
+              repeat: Infinity,
+              repeatType: "loop",
+              ease: "linear",
+            },
+          }
+        : {},
+      rotateMobile: isMobile
+        ? {
+            rotate: [0, 360],
+            transition: {
+              duration: 2,
+              repeat: Infinity,
+              ease: "linear",
+            },
+          }
+        : {},
+    };
+
+    setIconVariants(variants);
+  }, []);
+
+  const handleStart = (index: number) => {
+    const newStates = [...hoverStates];
+    newStates[index] = true;
+    setHoverStates(newStates);
   };
 
-  const transition = {
-    type: "spring",
-    stiffness: 300,
-    damping: 20,
+  const handleEnd = (index: number) => {
+    const newStates = [...hoverStates];
+    newStates[index] = false;
+    setHoverStates(newStates);
   };
 
-  const iconList = [
-    {
-      href: "mailto:rizkirenden@gmail.com",
-      icon: <MdOutgoingMail className={`${mailColor} ${mailSize}`} />,
-    },
-    {
-      href: "https://github.com/rizkirenden",
-      icon: <FaGithub className="text-white text-xl" />,
-    },
-    {
-      href: "https://linkedin.com/in/rizki-renden",
-      icon: <FaLinkedin className="text-white text-xl" />,
-    },
-    {
-      href: "https://instagram.com/rizkirenden",
-      icon: <FaInstagram className="text-white text-xl" />,
-    },
-  ];
+  if (!iconVariants) return null; // hindari rendering sebelum siap
 
   return (
-    <div className={`flex items-center gap-4 ${className}`}>
-      {iconList.map(({ href, icon }, i) => (
+    <div className={`flex items-center gap-5 ${className}`}>
+      {icons.map(({ href, Icon, color, size }, i) => (
         <motion.a
           key={i}
           href={href}
@@ -73,11 +99,23 @@ export const Icons = ({
           rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
           variants={iconVariants}
           initial="initial"
-          animate={controls}
           whileHover="hover"
-          transition={transition}
+          whileTap="tap"
+          onHoverStart={() => handleStart(i)}
+          onHoverEnd={() => handleEnd(i)}
+          onTouchStart={() => handleStart(i)}
+          onTouchEnd={() => handleEnd(i)}
+          onTouchCancel={() => handleEnd(i)}
+          animate={
+            hoverStates[i]
+              ? "initial"
+              : iconVariants.rotateMobile.rotate
+              ? "rotateMobile"
+              : "falling"
+          }
+          style={{ position: "relative", display: "inline-block" }}
         >
-          {icon}
+          <Icon className={`${color} ${size} transition-all duration-300`} />
         </motion.a>
       ))}
     </div>
