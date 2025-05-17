@@ -4,24 +4,24 @@ import Image from "next/image";
 
 const Cardfotohome = () => {
   return (
-    <div className="relative">
+    <div className="relative w-full md:w-auto">
       <Card
         rounded="rounded-lg"
-        height="h-78"
-        width="w-61"
+        height="h-64 md:h-78"
+        width="w-48 md:w-61"
         cardcolor="bg-[#393737]"
-        className="absolute top-1 left-1 z-0"
+        className="absolute top-1 left-17 md:left-1 z-0"
       >
         <></>
       </Card>
       <Card
         rounded="rounded-lg"
-        height="h-76"
-        width="w-59"
+        height="h-60 md:h-76"
+        width="w-44 md:w-59"
         cardcolor="bg-white"
-        className="relative z-10 overflow-visible"
+        className="relative z-10 overflow-visible mx-auto md:mx-0"
       >
-        <div className="relative w-59 h-96 absolute -top-20 left-1/2 -translate-x-1/2">
+        <div className="relative w-full h-76 md:h-96 absolute -top-16 md:-top-20 left-1/2 -translate-x-1/2">
           <Image
             src="/images/rizkihome.png"
             alt="Foto Rizki"

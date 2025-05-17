@@ -13,7 +13,7 @@ export const Namenav = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="flex gap-6 text-md">
+    <nav className="flex gap-4 md:gap-6 text-sm md:text-md">
       {navItems.map((item) => {
         const isActive = pathname === item.href;
 
