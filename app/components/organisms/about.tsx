@@ -53,10 +53,12 @@ const About = () => {
               </Subtittle>
 
               {/* Stats */}
-              <div className="mt-6 flex gap-12 md:gap-20">
+              <div className="mt-6 flex gap-12 text-center justify-center md:justify-start gap-20">
                 <div className="flex flex-col">
                   <Tittleabout>5+</Tittleabout>
-                  <Subtittle className="text-[#C7C7C7]">Project</Subtittle>
+                  <Subtittle className="text-[#C7C7C7]">
+                    Project Complete
+                  </Subtittle>
                 </div>
                 <div className="flex flex-col">
                   <Tittleabout>1+</Tittleabout>
