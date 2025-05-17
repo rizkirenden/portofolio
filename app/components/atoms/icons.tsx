@@ -4,8 +4,8 @@ import { MdOutgoingMail } from "react-icons/md";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-// Variants termasuk animasi rotate untuk mobile
-const iconVariants = {
+// Semua variant di-declare lengkap di sini
+const getIconVariants = (isMobile: boolean) => ({
   initial: { scale: 1, rotate: 0, y: 0 },
   hover: {
     scale: 1.2,
@@ -13,25 +13,29 @@ const iconVariants = {
     transition: { type: "spring", stiffness: 1000 },
   },
   tap: { scale: 0.9 },
-  falling: {
-    y: ["-100%", "110%"],
-    rotate: [0, 360],
-    transition: {
-      duration: 3,
-      repeat: Infinity,
-      repeatType: "loop",
-      ease: "linear",
-    },
-  },
-  rotateMobile: {
-    rotate: [0, 360],
-    transition: {
-      duration: 2,
-      repeat: Infinity,
-      ease: "linear",
-    },
-  },
-};
+  falling: !isMobile
+    ? {
+        y: ["-100%", "110%"],
+        rotate: [0, 360],
+        transition: {
+          duration: 3,
+          repeat: Infinity,
+          repeatType: "loop",
+          ease: "linear",
+        },
+      }
+    : {},
+  rotateMobile: isMobile
+    ? {
+        rotate: [0, 360],
+        transition: {
+          duration: 2,
+          repeat: Infinity,
+          ease: "linear",
+        },
+      }
+    : {},
+});
 
 const icons = [
   {
@@ -67,13 +71,15 @@ export const Icons = ({ className = "" }: { className?: string }) => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Deteksi jika user pakai device mobile
+    // Deteksi perangkat dengan pointer kasar (biasanya mobile)
     const checkMobile = () =>
       setIsMobile(window.matchMedia("(pointer: coarse)").matches);
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
+
+  const iconVariants = getIconVariants(isMobile);
 
   const handleStart = (index: number) => {
     const newStates = [...hoverStates];
