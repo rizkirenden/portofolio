@@ -1,7 +1,7 @@
 import React from "react";
 import { Title } from "../../atoms/title";
 
-const tittleproject = ({ children }: { children: React.ReactNode }) => {
+const Tittleproject = ({ children }: { children: React.ReactNode }) => {
   return (
     <div>
       <Title textClass="text-4xl text-white"> {children}</Title>
@@ -9,4 +9,4 @@ const tittleproject = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default tittleproject;
+export default Tittleproject;
