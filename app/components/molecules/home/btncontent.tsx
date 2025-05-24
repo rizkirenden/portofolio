@@ -4,9 +4,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "../../atoms/button";
 import { Subtitle } from "../../atoms/subtitle";
-import { MdOutgoingMail } from "react-icons/md";
+import { LiaFileDownloadSolid } from "react-icons/lia";
 
-const BtnContactMe = () => {
+const BtnContent = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -17,19 +17,19 @@ const BtnContactMe = () => {
       viewport={{ once: true }}
     >
       <Button
-        href="mailto:rizkirenden@gmail.com"
-        className="bg-[#62D9F6] hover:bg-[#5acbe7] transition-all duration-300 shadow-lg hover:shadow-cyan-400/50 group rounded-full px-6 py-3"
+        href="https://drive.google.com/file/d/1Du7garccpdFqqYGLuiHYWZcpQmOFvTPq/view?usp=drive_link"
+        className="bg-green-500 hover:bg-green-400 transition-all duration-300 shadow-lg hover:shadow-cyan-400/50 group rounded-full px-6 py-3"
       >
         <div className="flex items-center gap-3">
           <Subtitle className="text-white group-hover:animate-pulse">
-            Contact
+            Content
           </Subtitle>
           <motion.div
             initial={{ rotate: 0 }}
             animate={{ rotate: [0, -10, 10, -10, 0] }}
             transition={{ repeat: Infinity, duration: 2 }}
           >
-            <MdOutgoingMail className="text-white text-lg" />
+            <LiaFileDownloadSolid className="text-white text-lg" />
           </motion.div>
         </div>
       </Button>
@@ -37,4 +37,4 @@ const BtnContactMe = () => {
   );
 };
 
-export default BtnContactMe;
+export default BtnContent;
