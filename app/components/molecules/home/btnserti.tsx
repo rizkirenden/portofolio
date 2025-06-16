@@ -18,10 +18,10 @@ const BtnSerti = () => {
     >
       <Button
         href="https://drive.google.com/file/d/1FswXreayqQn2mYgoaH0INt-4B0iV-05t/view?usp=sharing"
-        className="bg-white hover:bg-white transition-all duration-300 shadow-lg hover:shadow-cyan-400/50 group rounded-full px-6 py-3"
+        className="bg-[#0672de] hover:bg-[#0672de]transition-all duration-300 shadow-lg hover:shadow-cyan-400/50 group rounded-full px-6 py-3"
       >
         <div className="flex items-center gap-3">
-          <Subtitle className="text-black group-hover:animate-pulse">
+          <Subtitle className="text-white group-hover:animate-pulse">
             Resume
           </Subtitle>
           <motion.div
@@ -29,7 +29,7 @@ const BtnSerti = () => {
             animate={{ rotate: [0, -10, 10, -10, 0] }}
             transition={{ repeat: Infinity, duration: 2 }}
           >
-            <GrCertificate className="text-black text-lg" />
+            <GrCertificate className="text-white text-lg" />
           </motion.div>
         </div>
       </Button>
