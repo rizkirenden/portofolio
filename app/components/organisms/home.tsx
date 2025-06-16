@@ -7,6 +7,7 @@ import Btncontacme from "../molecules/home/btncontacme";
 import BtnMotivation from "../molecules/home/btnmotivation";
 import Footer from "../molecules/home/footer";
 import BtnContent from "../molecules/home/btncontent";
+import BtnSerti from "../molecules/home/btnserti";
 
 const Home = () => {
   return (
@@ -24,6 +25,7 @@ const Home = () => {
                 <Btncontacme />
                 <BtnMotivation />
                 <BtnContent />
+                <BtnSerti />
               </div>
             </div>
           </div>

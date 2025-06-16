@@ -4,9 +4,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "../../atoms/button";
 import { Subtitle } from "../../atoms/subtitle";
-import { IoCloudDownloadOutline } from "react-icons/io5";
+import { GrCertificate } from "react-icons/gr";
 
-const BtnResume = () => {
+const BtnSerti = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -17,7 +17,7 @@ const BtnResume = () => {
       viewport={{ once: true }}
     >
       <Button
-        href="https://drive.google.com/file/d/1ABCdEfGhiJKlmNOPqRstuvWxyz/view?usp=sharing"
+        href="https://drive.google.com/file/d/1FswXreayqQn2mYgoaH0INt-4B0iV-05t/view?usp=sharing"
         className="bg-white hover:bg-white transition-all duration-300 shadow-lg hover:shadow-cyan-400/50 group rounded-full px-6 py-3"
       >
         <div className="flex items-center gap-3">
@@ -29,7 +29,7 @@ const BtnResume = () => {
             animate={{ rotate: [0, -10, 10, -10, 0] }}
             transition={{ repeat: Infinity, duration: 2 }}
           >
-            <IoCloudDownloadOutline className="text-black text-lg" />
+            <GrCertificate className="text-black text-lg" />
           </motion.div>
         </div>
       </Button>
@@ -37,4 +37,4 @@ const BtnResume = () => {
   );
 };
 
-export default BtnResume;
+export default BtnSerti;
