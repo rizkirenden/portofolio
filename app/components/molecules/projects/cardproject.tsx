@@ -46,6 +46,14 @@ const Cardproject = () => {
         "Sistem deteksi kebakaran menggunakan teknologi React Native, Laravel, IoT, Tailwind",
       alt: "Sistem Deteksi Kebakaran",
     },
+    {
+      id: 6,
+      image: "/images/project6.jpg",
+      tittle: "Toko Roti",
+      subtittle:
+        "Toko Roti menggunakan teknologi React Js, Express Js, Tailwind, Suztand",
+      alt: "Toko Roti",
+    },
   ];
 
   return (
