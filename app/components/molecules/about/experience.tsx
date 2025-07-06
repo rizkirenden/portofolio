@@ -33,8 +33,7 @@ const Experience = () => {
               Des 2023 - Jan 2024 | Palu, Indonesia - Magang
             </Subtitle>
             <Subtitle className="text-white">
-              Melakukan kegiatan Monitoring ATM dan melakukan pembuatan Web
-              E-Monitoring Project pada Divisi IT
+              Melakukan pembuatan Web E-Monitoring Project pada Divisi IT
             </Subtitle>
           </div>
         </div>

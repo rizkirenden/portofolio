@@ -8,6 +8,7 @@ import BtnMotivation from "../molecules/home/btnmotivation";
 import Footer from "../molecules/home/footer";
 import BtnContent from "../molecules/home/btncontent";
 import BtnSerti from "../molecules/home/btnserti";
+import BtnCreative from "../molecules/home/btncvcreative";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
             <div className="px-4 md:px-0">
               <div className="grid grid-cols-2 gap-3 pt-4 w-full max-w-md mx-auto md:flex md:flex-row md:justify-start md:gap-4 md:max-w-none md:mx-0">
                 <Btnresume />
+                <BtnCreative />
                 <Btncontacme />
                 <BtnMotivation />
                 <BtnContent />

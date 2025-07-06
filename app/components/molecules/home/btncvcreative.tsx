@@ -18,11 +18,11 @@ const BtnCreative = () => {
     >
       <Button
         href="https://drive.google.com/file/d/18EeTAsuetZyKJPaFigiJcnpCkJFJ5aG-/view?usp=sharing"
-        className="bg-green-500 hover:bg-green-400 transition-all duration-300 shadow-lg hover:shadow-cyan-400/50 group rounded-full px-6 py-3"
+        className="bg-indigo-600 hover:bg-indigo-600 transition-all duration-300 shadow-lg hover:shadow-cyan-400/50 group rounded-full px-6 py-3"
       >
         <div className="flex items-center gap-3">
           <Subtitle className="text-white group-hover:animate-pulse">
-            Cv Creative
+            Creative
           </Subtitle>
           <motion.div
             initial={{ rotate: 0 }}

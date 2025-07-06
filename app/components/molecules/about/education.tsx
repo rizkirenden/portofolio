@@ -69,7 +69,7 @@ const Education = () => {
         />
         <EducationItem
           title="Full Stack Web Developer @Hari Senin"
-          subtitle="Mar 2025 - Jun 2025"
+          subtitle="Mar 2025 - May 2025"
           gpa="Lulusan Full Stack Web Developer Bootcamp Program from Hari Senin. Skill yang dipelajari: HTML, CSS, JavaScript, React.js, Express.js, MySQL"
           showLine={true}
         />
