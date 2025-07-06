@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "../../atoms/button";
 import { Subtitle } from "../../atoms/subtitle";
-import { IoCloudDownloadOutline } from "react-icons/io5";
+import { TbFileCv } from "react-icons/tb";
 
 const BtnResume = () => {
   return (
@@ -22,14 +22,14 @@ const BtnResume = () => {
       >
         <div className="flex items-center gap-3">
           <Subtitle className="text-black group-hover:animate-pulse">
-            Resume
+            Cv
           </Subtitle>
           <motion.div
             initial={{ rotate: 0 }}
             animate={{ rotate: [0, -10, 10, -10, 0] }}
             transition={{ repeat: Infinity, duration: 2 }}
           >
-            <IoCloudDownloadOutline className="text-black text-lg" />
+            <TbFileCv className="text-black text-lg" />
           </motion.div>
         </div>
       </Button>

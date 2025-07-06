@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "../../atoms/button";
 import { Subtitle } from "../../atoms/subtitle";
-import { LiaFileDownloadSolid } from "react-icons/lia";
+import { IoCloudDownloadOutline } from "react-icons/io5";
 
 const BtnCreative = () => {
   return (
@@ -22,14 +22,14 @@ const BtnCreative = () => {
       >
         <div className="flex items-center gap-3">
           <Subtitle className="text-white group-hover:animate-pulse">
-            Content
+            Cv Creative
           </Subtitle>
           <motion.div
             initial={{ rotate: 0 }}
             animate={{ rotate: [0, -10, 10, -10, 0] }}
             transition={{ repeat: Infinity, duration: 2 }}
           >
-            <LiaFileDownloadSolid className="text-white text-lg" />
+            <IoCloudDownloadOutline className="text-white text-lg" />
           </motion.div>
         </div>
       </Button>
