@@ -21,7 +21,7 @@ const About = () => {
         {/* Title Section */}
         <section className="py-6">
           <div className="max-w-6xl mx-auto text-center">
-            <Tittleabout>TENTANG SAYA</Tittleabout>
+            <Tittleabout>ABOUT ME</Tittleabout>
           </div>
         </section>
 
@@ -36,20 +36,20 @@ const About = () => {
             {/* Profile Text */}
             <div className="w-full md:w-2/3 md:order-1 text-center md:text-left">
               <Subtittle>
-                Hai! Saya <span className="text-[#62D9F6]">MOH. RIZKI</span>,
-                seorang Software Engineer yang berdedikasi dan serbaguna dengan
-                landasan yang kuat dalam pengembangan full-stack, khususnya di
-                JavaScript, PHP, Node.js, React.js, Express.js, Laravel, dan
-                teknologi web modern. Saya adalah lulusan Teknik Informatika
-                dari Universitas Tadulako, dan alumni program bootcamp intensif
-                di Harisenin, yang membantu saya memantapkan keterampilan
-                praktis di dunia industri. Dengan semangat dalam membangun
-                aplikasi yang berpusat pada pengguna, saya telah berhasil
-                berkontribusi dalam pengembangan sistem monitoring proyek dan
-                sistem administrasi service serta stok bengkel, serta mendorong
-                peningkatan efisiensi alur kerja. Saat ini, saya sedang mencari
-                peluang untuk memanfaatkan keterampilan saya dalam tim global
-                berbasis teknologi yang berfokus pada solusi yang berdampak.
+                Hi! I’m <span className="text-[#62D9F6]">MOH. RIZKI</span>, a
+                dedicated and versatile Software Engineer with a strong
+                foundation in full-stack development, specializing in
+                JavaScript, PHP, Node.js, React.js, Express.js, Laravel, and
+                modern web technologies. I hold a Bachelor’s degree in Computer
+                Science from Tadulako University and am a graduate of an
+                intensive Full Stack Developer bootcamp at Harisenin, which
+                strengthened my practical, industry-ready skills. Passionate
+                about building user-centered applications, I have contributed to
+                the development of a project monitoring system and a service
+                administration & workshop inventory system, helping to enhance
+                workflow efficiency. I am now seeking opportunities to leverage
+                my skills in a global tech-driven team focused on delivering
+                impactful solutions.
               </Subtittle>
 
               {/* Stats */}
@@ -74,7 +74,7 @@ const About = () => {
         {/* Technology Section */}
         <section className="mb-12 md:mb-16">
           <div className="max-w-6xl mx-auto mb-6 text-center">
-            <Tittleabout>TEKNOLOGI</Tittleabout>
+            <Tittleabout>TECHNOLOGY</Tittleabout>
           </div>
           <div className="w-full">
             <Cardteknologi />

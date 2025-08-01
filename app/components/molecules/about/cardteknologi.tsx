@@ -27,7 +27,7 @@ const dataTeknologi = [
   },
   {
     title: "EXPRESS JS",
-    image: "/images/express-js.png",
+    image: "/images/ExpressJs.png",
     color: "text-[#000000]",
     bgColor: "#000000",
   },

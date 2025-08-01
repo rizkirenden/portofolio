@@ -22,7 +22,7 @@ const BtnMotivation = () => {
       >
         <div className="flex items-center gap-3">
           <Subtitle className="text-white group-hover:animate-pulse">
-            Motivasi
+            Motivation
           </Subtitle>
           <motion.div
             initial={{ rotate: 0 }}

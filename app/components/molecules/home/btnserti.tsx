@@ -22,7 +22,7 @@ const BtnSerti = () => {
       >
         <div className="flex items-center gap-3">
           <Subtitle className="text-white group-hover:animate-pulse">
-            Sertifikat
+            Certificate
           </Subtitle>
           <motion.div
             initial={{ rotate: 0 }}

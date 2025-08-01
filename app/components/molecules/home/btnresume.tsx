@@ -17,7 +17,7 @@ const BtnResume = () => {
       viewport={{ once: true }}
     >
       <Button
-        href="https://drive.google.com/file/d/1aY3P8J4kgCi_MGMI8MUy18jmKbv8GCFi/view?usp=drive_link"
+        href="https://drive.google.com/file/d/1-Ld-zJOEjhyqA3XrUI8Gpoj2kc9AQLp4/view?usp=drive_link"
         className="bg-white hover:bg-white transition-all duration-300 shadow-lg hover:shadow-cyan-400/50 group rounded-full px-6 py-3"
       >
         <div className="flex items-center gap-3">
