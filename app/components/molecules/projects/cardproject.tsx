@@ -55,7 +55,7 @@ const Cardproject = () => {
         "Aplikasi IoT untuk mendeteksi potensi kebakaran dan mengirim notifikasi ke pengguna.",
       tech: ["React Native", "Laravel", "IoT", "Tailwind"],
       alt: "Sistem Deteksi Kebakaran",
-      link: "",
+      link: "https://github.com/rizkirenden/skripsi",
     },
     {
       id: 6,
