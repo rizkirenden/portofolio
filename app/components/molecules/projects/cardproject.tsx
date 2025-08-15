@@ -127,7 +127,6 @@ const Cardproject = () => {
                 <div className="mt-4 flex justify-center">
                   <Button
                     href={project.link}
-                    target="_blank"
                     className="bg-white hover:bg-[#E5E0D8] text-black font-semibold px-4 py-2 rounded-lg transition-all duration-300"
                   >
                     Link Project
