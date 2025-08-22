@@ -73,6 +73,12 @@ const dataTeknologi = [
     color: "text-[#38BDF8]",
     bgColor: "#38BDF8",
   },
+  {
+    title: "MICROSOFT OFFICE",
+    image: "/images/office.png",
+    color: "text-[#F05033]",
+    bgColor: "#F05033",
+  },
 ];
 
 const scrollDuration = 40; // durasi animasi berjalan dalam detik, bisa kamu ubah

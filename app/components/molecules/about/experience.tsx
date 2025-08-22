@@ -35,6 +35,13 @@ const Experience = () => {
             <Subtitle className="text-white">
               Melakukan pembuatan Web E-Monitoring Project pada Divisi IT
             </Subtitle>
+            <Subtitle className="text-white">
+              Membuat laporan dan rekap jumlah uang pada ATM menggunakan
+              Microsoft Excel.
+            </Subtitle>
+            <Subtitle className="text-white">
+              Membuat laporan kerusakan mesin ATM ke vendor
+            </Subtitle>
           </div>
         </div>
       </div>
