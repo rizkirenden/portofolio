@@ -114,7 +114,7 @@ const Experience = () => {
           <div className="flex flex-col">
             <Title textClass="text-white text-2xl font-normal">
               FULL STACK DEVELOPER{" "}
-              <span style={{ color: "#62D9F6" }}>Premier Motors</span>
+              <span style={{ color: "#62D9F6" }}>@Premier Motors</span>
             </Title>
             <Subtitle className="text-[#C7C7C7]">
               May 2025 - Present | Palu, Indonesia

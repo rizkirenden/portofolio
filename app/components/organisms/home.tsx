@@ -47,9 +47,7 @@ const Home = () => {
       {/* Section Perusahaan yang ditangani */}
       <div className="py-12 px-4 md:px-8 bg-[#1C1C1C]">
         <div className="max-w-6xl mx-auto text-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-white">
-            Pengalaman Kerja Saya
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white"></h2>
         </div>
         <CompanyCardList />
       </div>
