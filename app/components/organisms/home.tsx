@@ -9,15 +9,20 @@ import Footer from "../molecules/home/footer";
 import BtnContent from "../molecules/home/btncontent";
 import BtnSerti from "../molecules/home/btnserti";
 import BtnCreative from "../molecules/home/btncvcreative";
+import CompanyCardList from "../molecules/home/cardexperience"; // import component perusahaan
 
 const Home = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-[#1C1C1C] text-white">
+      {/* Header */}
       <div className="px-4 md:px-8 py-4">
         <Header />
       </div>
+
+      {/* Hero Section */}
       <div className="flex-1 flex items-center px-4 md:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl mx-auto gap-8 md:gap-0">
+          {/* Teks & Buttons */}
           <div className="w-full md:w-1/2 order-2 md:order-1">
             <Tittlehome />
             <div className="px-4 md:px-0">
@@ -31,11 +36,25 @@ const Home = () => {
               </div>
             </div>
           </div>
+
+          {/* Foto */}
           <div className="w-full md:w-auto order-1 md:order-2 md:mr-16">
             <Cardfotohome />
           </div>
         </div>
       </div>
+
+      {/* Section Perusahaan yang ditangani */}
+      <div className="py-12 px-4 md:px-8 bg-[#1C1C1C]">
+        <div className="max-w-6xl mx-auto text-center mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-white">
+            Pengalaman Kerja Saya
+          </h2>
+        </div>
+        <CompanyCardList />
+      </div>
+
+      {/* Footer */}
       <footer className="mt-auto mb-4 md:mb-8 px-4 md:px-0 text-center">
         <div className="max-w-6xl mx-auto">
           <Footer />

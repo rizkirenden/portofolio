@@ -67,6 +67,16 @@ const Cardproject = () => {
       alt: "Toko Roti",
       link: "https://github.com/rizkirenden/toko",
     },
+    {
+      id: 7,
+      image: "/images/project7.jpeg",
+      tittle: "Proyek Management Konstruksi",
+      description:
+        "Sistem manajemen konstruksi berbasis web untuk monitoring biaya, pembayaran tukang, material, dan unit project secara terintegrasi menggunakan Laravel dan Tailwind.",
+      tech: ["Laravel", "NodeJs", "Tailwind"],
+      alt: "Proyek Management Konstruksi",
+      link: "https://pt-triputra.com",
+    },
   ];
 
   return (
